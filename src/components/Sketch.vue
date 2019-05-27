@@ -38,7 +38,15 @@
     <div class="vc-sketch-presets" role="group" aria-label="A color preset, pick one to set as current color">
       <template v-for="c in presetColors">
         <div
-          v-if="!isTransparent(c)"
+          v-if="c.custom !== undefined"
+          class="vc-sketch-presets-color"
+          :aria-label="'Color:' + c.custom"
+          :key="c.custom"
+          :style="c.style"
+          @click="handlePreset(c)">
+        </div>
+        <div
+          v-else-if="!isTransparent(c)"
           class="vc-sketch-presets-color"
           :aria-label="'Color:' + c"
           :key="c"

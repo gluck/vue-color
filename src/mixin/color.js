@@ -9,6 +9,8 @@ function _colorChange (data, oldHue) {
     color = tinycolor(data.hsl)
   } else if (data && data.hex && data.hex.length > 0) {
     color = tinycolor(data.hex)
+  } else if (data && data.hex && data.hex.custom !== undefined) {
+    color = tinycolor(data.hex.primary)
   } else {
     color = tinycolor(data)
   }
@@ -47,6 +49,7 @@ function _colorChange (data, oldHue) {
     hsv: hsv,
     oldHue: data.h || oldHue || hsl.h,
     source: data.source,
+    custom: data.hex && data.hex.custom,
     a: data.a || color.getAlpha()
   }
 }

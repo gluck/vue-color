@@ -1,6 +1,6 @@
 {
-  "name": "vue-color",
-  "version": "2.7.0",
+  "name": "@gluck/vue-color",
+  "version": "2.7.0-1",
   "description": "Color of Vue Components",
   "keywords": [
     "color",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaokaike/vue-color"
+    "url": "https://github.com/gluck/vue-color"
   },
   "author": "xiaokai <kexiaokai@gmail.com>",
   "dependencies": {
